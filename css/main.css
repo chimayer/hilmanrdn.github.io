@@ -2,9 +2,15 @@ body{
   margin: 5% 20% 0 20%;
   font-family: 'Oxygen', sans-serif;
 }
+
+nav a {
+    font-size: 24px;
+}
+
 h1{ color:rgb(66, 63, 64); }
 a{ color:black; color:rgb(66, 63, 64); }
-p{ font-size: 22px; }
+ol,li{ list-style-type: none; }
+p{ font-size: 20px; }
 #pr_list p{ margin: 0px; }
 
 button {
@@ -13,10 +19,14 @@ button {
 }
 
 .book-title{
-     font-size: 22px;   
+     font-size: 22px;
 }
-#books li {
+#items li {
     margin-bottom: 10px;
+}
+
+footer{
+    margin-top: 10px;
 }
 
 @media only screen and (max-width: 500px) {

@@ -20,7 +20,7 @@
 
     <section>
         <button v-on:click="sortByDate">Sort by date</button>
-        <ul id="books">
+        <ul id="items">
           <li v-for="book in books">
             <a href="#" class='book-title'> {{ book.title }} </a> Date read: <span> {{book.date}} </span>
             <p> {{ book.desc }} </p>
@@ -29,6 +29,10 @@
         </ul>
     </section>
     </div>
+
+    <footer>
+        <a href="https://twitter.com/hilmanrdn">@hilmanrdn</a>
+    </footer>
 
     <script>
     new Vue({

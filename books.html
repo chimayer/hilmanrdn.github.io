@@ -22,7 +22,7 @@
         <button v-on:click="sortByDate">Sort by date</button>
         <ul id="items">
           <li v-for="book in books">
-            <a href="#" class='book-title'> {{ book.title }} </a> Date read: <span> {{book.date}} </span>
+            <a href="#" class='tem-title'> {{ book.title }} </a> Date read: <span> {{book.date}} </span>
             <p> {{ book.desc }} </p>
             <a :href="book.notes" target="_blank" v-if=book.notes> Baca tulisan saya </a>
           </li>

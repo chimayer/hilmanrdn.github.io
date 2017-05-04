@@ -18,6 +18,12 @@ button {
     font-size:16px;
 }
 
+.button_link{
+    padding: 5px;
+    margin: 0 5px;
+    
+}
+
 .item-title{
      font-size: 22px;
 }

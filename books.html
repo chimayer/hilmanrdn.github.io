@@ -22,9 +22,11 @@
         <button v-on:click="sortByDate">Sort by date</button>
         <ul id="items">
           <li v-for="book in books">
-            <a href="#" class='item-title'> {{ book.title }} </a> Date read: <span> {{book.date}} </span>
+            <p class='item-title'> {{ book.title }}</p>
             <p> {{ book.desc }} </p>
+			Date read: <span> {{book.date}} </span>
             <a :href="book.notes" target="_blank" v-if=book.notes> Baca tulisan saya </a>
+			<a :href="book.link" target="_blank" v-if=book.link> Beli di BookDepository </a>
           </li>
         </ul>
     </section>
@@ -107,7 +109,37 @@ s.setAttribute('data-timestamp', +new Date());
                  desc: "Derek Sivers ngga ada niat untuk ngedapetin user sebanyak banyaknya. Tapi dia nyelesaiin masalah yang nyata, buat musisi dan juga fans musisinya. Sampai udah gede pun, dia tetap megang valuenya, dia nolak artis gede jualan di websitenya, karena memang niat awalnya untuk musisi indie yang kesulitan seperti dia. CD baby, website tempat jual cd online yang dimulai karena dia sendiri kesulitan ngejual albumnya, 8 tahun kemudian dijual dengan harga 22 juta dollar, bukan daun.",
                  date: '2017.02.20',
                  notes: 'http://hilmanrdn.id/notes/buku/2017/02/20/anything-you-want-resensi-buku.html'
-             }
+             },
+			 {
+				 title: "Delivering Happines - Tony Hsieh",
+				 desc: "Di buku ini kita akan ngelihat gimana kalau orang benar-benar punya passiond dengan apa yang dikerjain. Zappos bukan perusahan pertama yang dibikin Tony, tapi keseriusannya bikin produk dengan customer service terbaik sangat menginspirasi",
+				 date: '2016.10.27'
+			 },
+			 {
+				 title: "Purple Cow - Seth Godin",
+				 desc: "Sapi hitam dan putin itu biasa, tapi gimana kalau ada sapi warna ungu? menarik kan! Di sini kita akan kembali diingatkan gimana powerfulnya kalau kita berbeda dari yang lain dan tentu langkah-langkan menuju jadi berbeda",
+				 date: '2017.03.01'
+			 },
+			 {
+				 title: "Poke The Box - Seth Godin",
+				 desc: "Kapan terakhir kali kita nyoba sesuatu untuk pertama kali? alasan takut atau alasan gagal yang sering muncul cuma cocok untuk orang-orang yang puas dengan menghayal ,orang-orang yang puas dengan status quo(keadaan sekarang)",
+				 date: '2017.03.07'
+			 },
+			 {
+				 title: "The Answer - John Assaraf & Murray Smith",
+				 desc: "Bukan hanya bisnis, kehidupan pribadi pun sangat-sangat mungkin kita improve sejauh yang kita mau. Langkah kongkrit gimana ngubah sikap, mental dan aksi kita untuk dapetin hasil yang kita mau",
+				 date: '2017.02.19'
+			 },
+			 {
+				 title: "The 22 Immutable Laws Of Marketing - Al Ries & Jack Trout",
+				 desc: "22 hukum alam bagaimana marketing bekerja, boleh percaya boleh ngga, yang paling penting dipraktekkan. Di buku ini juga ngasih contoh kongkrit dari masing-masing hukum, perusahaan apa aja yang udah make ini.",
+				 date: '2017.02.19'
+			 },
+			 {
+				 title: "Blue Ocean Startegy - W. Chan Kim & Renee Mauborgne",
+				 desc: "Saat membuat usaha kita selalu nyari rival, ngelihat yang sudah ada, berusaha lebih baik dari dia. Gimana kalau ternyata itu bukan satu-satunya cara buat menang. Gimana kalau kita bisa membuat semua rival kita ngga relevan dan tidak bisa tersaingi.",
+				 date: '2017.03.15',
+			 },
            ]
        },
        methods: {

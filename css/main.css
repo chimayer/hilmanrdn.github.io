@@ -9,7 +9,7 @@ nav a {
 
 h1{ color:rgb(66, 63, 64); }
 a{ color:black; color:rgb(66, 63, 64); }
-ol,li{ list-style-type: none; }
+ol,ul{ list-style-type: none; padding: 0; margin: 0;}
 p{ font-size: 20px; }
 #pr_list p{ margin: 0px; }
 
@@ -21,7 +21,7 @@ button {
 .button_link{
     padding: 5px;
     margin: 0 5px;
-    
+
 }
 
 .item-title{

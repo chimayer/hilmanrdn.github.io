@@ -1,0 +1,102 @@
+<html>
+<head>
+	<title> Rekomendasi Buku - hilmanrdn</title>
+    <meta name="description" content="Rekomendasi buku dari Hilman Ramadhan.">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.2/vue.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="app">
+    <header>
+        <nav>
+            <a href="/">/Hilmanrdn</a>
+            <a href="/notes">/Notes</a>
+            <a href="/books">/Books</a>
+        </nav>
+        <h1>Rekomendasi buku</h1>
+    </header>
+
+    <section>
+        <button v-on:click="sortByDate">Sort by date</button>
+        <ul id="books">
+          <li v-for="book in books">
+            <a href="#" class='book-title'> {{ book.title }} </a> Date read: <span> {{book.date}} </span>
+            <p> {{ book.desc }} </p>
+            <a :href="book.notes" target="_blank" v-if=book.notes> Baca tulisan saya </a>
+          </li>
+        </ul>
+    </section>
+    </div>
+
+    <script>
+    new Vue({
+         el: '#app',
+         data: {
+           books: [
+             {
+                 title: "The One Thing - Gary Keller & Jay Papasan",
+                 desc: "Punya 3 prioritas sama seperti ngga punya prioritas, prioritas itu cuma 1. Belajar efek domino, pilih satu kerjaan yang akan ngasih efek besar dan memudahkan hidup kita. Pernah denger prinsip Pareto 80/20 ?, ini lebih dalem lagi",
+                 notes: "http://hilmanrdn.id/notes/buku/2017/02/16/the-one-thing-resensi-buku.html",
+                 date: '2016.12.20'
+             },
+             {
+                 title: "Deep Work - Cal Newport",
+                 desc: "Hasil kerja masih rata-rata seperti kebanyakan orang? Bawa kerjaan kita ke level yang berbeda dengan teknik-teknik deep work. Skill yang sangat mahal dan langka jaman sekarang",
+                 notes: "http://hilmanrdn.id/notes/buku/2017/02/16/deep-work-resensi-buku.html",
+                 date: '2016.11.10'
+             },
+             {
+                 title: "Without Their Permission - Alexis Ohanian",
+                 desc: "Tulisan dari yang bikin Reddit, salah satu website tersibuk di dunia. Perjalanan dari orang yang ngga tahu apa-apa berdua sama temannya ngembangin Reddit jadi bagian penting dari dunia ini. Dengan internet, ngga ada alesan lagi kita ngga ngerjain apa yang bisa bikin dunia sedikit lebih baik ",
+                 date: '2016.10.21'
+             },
+             {
+                 title: "Surely you're joking Mr.Feynman! - Richard P. Feynman",
+                 desc: "Betapa pentingnya ngerti sesuatu, bukan sekedar tahu atau hafal, selalu ditekankan juga, kalau praktek itu jauh jauh lebih penting dibanding teori, apapun bidang kita. Bill Gates, nyebut dia 'The Best Teacher I Never Had' Kisah-kisah menarik dan lucu Feynman, salah satu peraih Nobel Prize di Physics. Ngga perlu ngerti atau suka Fisika.  Jujur ada bagian yang ngebosenin atau rumus2 yg ngga paham, tapi pesan dari setiap ceritanya tetap luar biasa.",
+                 date: '2016.12.29'
+             },
+             {
+                 title: "Tools Of Titans - Tim Ferriss",
+                 desc: "Ada puluhan atau mungkin ratusan interview kebiasaan sehari-hari dan prinsip-prinsip orang-orang yang sukses di bidangnya masing-masing. Mulai dari master catur, beladiri, investor, penulis, profesor, artis, dll. Bervariasi banget kebiasaanya, ada yang cocok ada yang ngga, tapi layak dicoba buat nemuin formula yang pas biar lebih produktif belajar dan kerjaannya. Dagingnya banyak banget di satu buku, dibagi di 3 tema gede, Healthy, Wealthy dan Wise",
+                 date: '2017.01.13'
+             },
+             {
+                 title: "One+One = Three - Dave Trott",
+                 desc: "Bekal mantap buat jadi kreatif. Kumpulan cerita-cerita pendek, bagaimana orang-orang menyelesaikan masalahnya dengan solusi-solusi yang tidak masuk akal untuk sebagian besar orang lain. Salah satu teori 'connecting dots' yang dipopulerkan steve job jadi pembuka, bagaimana kita mau belajar mengkoneksikan titik-titik, kalau kita tidak punya banyak titik sebelumnya",
+                 date: '2016.11.20'
+             },
+             {
+                 title: "#AskGaryVee - Gary Vaynerchuk",
+                 desc: "Sudah ada 3-4 buku best seller yang dia tulis, dia bisa jadi penulis, public speaker tapi yang paling penting seorang praktisi di dunia nyata. Kalau mau jelas dia bisa istirahat, jalan-jalan, duitnya jangan ditanya. Dia milih terus bikin kontent, video/podcast dll dan ngejawab pertanyaan orang-orang. 'Ngga boleh ada alasan' prinsip utamanya, harus mau kerja keras, pasti ada jalan",
+                 date: '2017.01.26'
+             },
+             {
+                 title: "Rework - DHH & Jason Fried",
+                 desc: "Kumpulan pendapat (realita) yang ngga populer untuk dunia startup, orang-orang cuma mau denger pendapat yang populer, pendapat yang bikin dia seneng. Untuk teman-teman 'startup', dari awal niat bikin usaha untuk 'exit' di kemudian hari, dijual dan hidup santai seumur hidup, ngga ada modelbisnis, yang penting jumlah user selangit, ngga akan nyaman baca buku ini, tapi jadi pukulan keras",
+                 date: '2017.02.20'
+             },
+             {
+                 title: "Anything you want - Derek Sivers",
+                 desc: "Derek Sivers ngga ada niat untuk ngedapetin user sebanyak banyaknya. Tapi dia nyelesaiin masalah yang nyata, buat musisi dan juga fans musisinya. Sampai udah gede pun, dia tetap megang valuenya, dia nolak artis gede jualan di websitenya, karena memang niat awalnya untuk musisi indie yang kesulitan seperti dia. CD baby, website tempat jual cd online yang dimulai karena dia sendiri kesulitan ngejual albumnya, 8 tahun kemudian dijual dengan harga 22 juta dollar, bukan daun.",
+                 date: '2017.02.20',
+                 notes: 'http://hilmanrdn.id/notes/buku/2017/02/20/anything-you-want-resensi-buku.html'
+             }
+           ]
+       },
+       methods: {
+           sortByDate: function () {
+                 this.books.sort(function(a, b) {
+                      return new Date(a.date) - new Date(b.date)
+                  })
+                  return this.books
+                }
+            }
+
+      })
+
+    </script>
+
+</body>
+</html>

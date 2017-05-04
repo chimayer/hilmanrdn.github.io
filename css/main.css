@@ -1,0 +1,26 @@
+body{
+  margin: 5% 20% 0 20%;
+  font-family: 'Oxygen', sans-serif;
+}
+h1{ color:rgb(66, 63, 64); }
+a{ color:black; color:rgb(66, 63, 64); }
+p{ font-size: 22px; }
+#pr_list p{ margin: 0px; }
+
+button {
+    margin: 10px 0;
+    font-size:16px;
+}
+
+.book-title{
+     font-size: 22px;   
+}
+#books li {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+  body{ font-size: 80%; margin: 10%; }
+  h1 { font-size: 22px; }
+  p{ font-size: 18px; }
+}

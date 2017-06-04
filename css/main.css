@@ -25,6 +25,7 @@ button {
 
 }
 .post-content{
+      text-align: justify;
   line-height: 28px;
 }
 .item-title{

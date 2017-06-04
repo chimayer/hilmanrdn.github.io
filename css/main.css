@@ -8,7 +8,8 @@ nav a {
 }
 
 h1{ color:rgb(66, 63, 64); }
-a{ color:black; color:rgb(66, 63, 64); }
+a{ color:black; color:rgb(66, 63, 64); text-decoration:none; }
+a:hover {text-decoration:underline; }
 ol,ul{ list-style-type: none; padding: 0; margin: 0;}
 p{ font-size: 20px; }
 #pr_list p{ margin: 0px; }

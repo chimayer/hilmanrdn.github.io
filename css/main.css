@@ -44,8 +44,8 @@ button {
     flex-wrap: wrap;
 }
 .items-notes li {
-    margin-bottom: 50px;
-    width: 33%;
+    width: 30%;
+    margin: 0 1% 50px;
     flex-grow: 1;
     text-align: center;
 }

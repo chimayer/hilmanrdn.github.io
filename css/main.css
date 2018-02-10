@@ -36,6 +36,11 @@ button {
       text-align: justify;
   line-height: 28px;
 }
+
+.post-content a{
+ text-decoration: underline; 
+}
+
 .item-title{
      font-size: 22px;
 }
